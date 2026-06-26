@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BuildingRefs>
+
+    <BuildingRef>
+        <refName>PortalBarricade</refName>
+        <label>portal barricade</label>
+        <description>Crystallized energy barrier. Crumbles after enough hits.</description>
+        <category>Obstacle</category>
+        <health>50</health>
+        <destructible>true</destructible>
+        <blockMovement>true</blockMovement>
+        <interactionType>None</interactionType>
+    </BuildingRef>
+
+    <BuildingRef>
+        <refName>DrifterShop</refName>
+        <label>drifter's shop</label>
+        <description>A wandering merchant's stall. Smells like engine grease and ozone.</description>
+        <category>Shop</category>
+        <health>0</health>
+        <destructible>false</destructible>
+        <blockMovement>false</blockMovement>
+        <interactionType>Shop</interactionType>
+        <inventory>
+            <li>IronShard</li>
+            <li>StellarCore</li>
+        </inventory>
+    </BuildingRef>
+
+    <BuildingRef>
+        <refName>HealingPylon</refName>
+        <label>healing pylon</label>
+        <description>Ancient tech repurposed. Stand near it long enough and wounds close on their own.</description>
+        <category>Interactable</category>
+        <health>100</health>
+        <destructible>true</destructible>
+        <blockMovement>false</blockMovement>
+        <interactionType>HealAura</interactionType>
+    </BuildingRef>
+
+</BuildingRefs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CharacterRefs>
+
+    <CharacterRef>
+        <refName>Lonabella</refName>
+        <label>lonabella</label>
+        <description>Dwarven brawler from an ice-locked mining world. Settles every argument with her fists.</description>
+        <archetypeRef>Bruiser</archetypeRef>
+        <movementType>Dash</movementType>
+        <portraitPath>Art/Characters/Lonabella</portraitPath>
+        <maxActiveSkills>4</maxActiveSkills>
+        <defaultLoadout/>
+        <skillSlots/>
+    </CharacterRef>
+
+</CharacterRefs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SkillRefs>
+
+    <SkillRef>
+        <refName>BaseSkill_Combat</refName>
+        <label>combat</label>
+        <description>Weapon proficiency and direct damage techniques.</description>
+        <category>Combat</category>
+        <maxLevel>20</maxLevel>
+        <xpPerLevel>100</xpPerLevel>
+        <cooldown>1.5</cooldown>
+        <color>(220, 180, 60)</color>
+    </SkillRef>
+
+    <SkillRef>
+        <refName>BaseSkill_Signature</refName>
+        <label>signature</label>
+        <description>A wayfarer's ultimate technique. Unique to each character.</description>
+        <category>Signature</category>
+        <maxLevel>10</maxLevel>
+        <xpPerLevel>150</xpPerLevel>
+        <cooldown>6.0</cooldown>
+        <color>(255, 120, 30)</color>
+    </SkillRef>
+
+    <SkillRef>
+        <refName>BaseSkill_Movement</refName>
+        <label>movement</label>
+        <description>Repositioning techniques — dashes, blinks, phase shifts.</description>
+        <category>Movement</category>
+        <maxLevel>5</maxLevel>
+        <xpPerLevel>200</xpPerLevel>
+        <cooldown>4.0</cooldown>
+        <color>(100, 60, 200)</color>
+    </SkillRef>
+
+    <SkillRef>
+        <refName>BaseSkill_Passive</refName>
+        <label>passive</label>
+        <description>Always-on effects. No activation, no cooldown.</description>
+        <category>Passive</category>
+        <maxLevel>10</maxLevel>
+        <xpPerLevel>120</xpPerLevel>
+        <cooldown>0</cooldown>
+        <color>(80, 200, 160)</color>
+    </SkillRef>
+
+</SkillRefs>

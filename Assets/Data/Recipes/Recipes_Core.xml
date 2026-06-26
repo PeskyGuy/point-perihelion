@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecipeRefs>
+
+    <RecipeRef>
+        <refName>CraftVoidBlade</refName>
+        <label>craft void blade</label>
+        <description>Forge a blade from stellar cores and iron.</description>
+        <category>Crafting</category>
+        <ingredients>
+            <li>
+                <itemRef>StellarCore</itemRef>
+                <count>3</count>
+            </li>
+            <li>
+                <itemRef>IronShard</itemRef>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <outputRef>VoidBlade</outputRef>
+        <outputCount>1</outputCount>
+    </RecipeRef>
+
+</RecipeRefs>

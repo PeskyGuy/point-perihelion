@@ -105,3 +105,18 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# LLM / AI / MCP
+.gemini/
+.cursor/
+.copilot/
+.aider*
+.claude/
+.codex/
+.augment/
+.cline/
+.roo/
+mcp_config*.json
+.mcp/
+.vscode/mcp*.json
+Packages/com.coplaydev.unity-mcp/

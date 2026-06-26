@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemRefs>
+
+    <ItemRef>
+        <refName>IronShard</refName>
+        <label>iron shard</label>
+        <description>A jagged piece of refined ore. Warm to the touch.</description>
+        <category>Material</category>
+        <rarity>Common</rarity>
+        <stackable>true</stackable>
+        <maxStack>99</maxStack>
+    </ItemRef>
+
+    <ItemRef>
+        <refName>StellarCore</refName>
+        <label>stellar core</label>
+        <description>Compressed matter from a dying star. Thrums with contained fury.</description>
+        <category>Material</category>
+        <rarity>Rare</rarity>
+        <stackable>true</stackable>
+        <maxStack>10</maxStack>
+    </ItemRef>
+
+    <ItemRef>
+        <refName>VoidBlade</refName>
+        <label>void blade</label>
+        <description>The edge exists slightly outside normal space. Cuts things that shouldn't be cuttable.</description>
+        <category>Weapon</category>
+        <rarity>Epic</rarity>
+        <stackable>false</stackable>
+        <maxStack>1</maxStack>
+        <statModifiers>
+            <li>
+                <stat>attack</stat>
+                <value>12</value>
+                <operation>Add</operation>
+            </li>
+            <li>
+                <stat>speed</stat>
+                <value>1.1</value>
+                <operation>Multiply</operation>
+            </li>
+        </statModifiers>
+    </ItemRef>
+
+</ItemRefs>

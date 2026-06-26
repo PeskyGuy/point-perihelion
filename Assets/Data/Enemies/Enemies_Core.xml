@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EnemyRefs>
+
+    <EnemyRef>
+        <refName>PrimordialThrall</refName>
+        <label>primordial thrall</label>
+        <description>Mindless foot soldier of the sun-portals. Moves in packs.</description>
+        <category>Minion</category>
+        <health>30</health>
+        <damage>5</damage>
+        <speed>3.0</speed>
+        <attackPattern>Melee_Swarm</attackPattern>
+        <lootTable>
+            <li>
+                <itemRef>IronShard</itemRef>
+                <weight>0.8</weight>
+                <countMin>1</countMin>
+                <countMax>3</countMax>
+            </li>
+        </lootTable>
+    </EnemyRef>
+
+    <EnemyRef>
+        <refName>SolarWarden</refName>
+        <label>solar warden</label>
+        <description>An armored construct that guards the inner portal chambers. Hits hard, turns slow.</description>
+        <category>Elite</category>
+        <health>300</health>
+        <damage>25</damage>
+        <speed>1.5</speed>
+        <attackPattern>Melee_Heavy</attackPattern>
+        <lootTable>
+            <li>
+                <itemRef>StellarCore</itemRef>
+                <weight>0.4</weight>
+                <countMin>1</countMin>
+                <countMax>1</countMax>
+            </li>
+            <li>
+                <itemRef>IronShard</itemRef>
+                <weight>0.9</weight>
+                <countMin>3</countMin>
+                <countMax>8</countMax>
+            </li>
+        </lootTable>
+    </EnemyRef>
+
+</EnemyRefs>
