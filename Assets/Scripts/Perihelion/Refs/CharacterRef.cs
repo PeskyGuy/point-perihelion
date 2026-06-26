@@ -38,6 +38,12 @@ namespace Perihelion.Refs
         [XmlElement("portraitPath")]
         public string portraitPath;
 
+        [XmlElement("graphics")]
+        public CharacterGraphicsDef graphics;
+
+        [XmlElement("animations")]
+        public CharacterAnimationsDef animations;
+
         [XmlArray("defaultLoadout")]
         [XmlArrayItem("li")]
         public string[] defaultLoadout;

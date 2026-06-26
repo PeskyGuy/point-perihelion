@@ -13,7 +13,7 @@ namespace Perihelion.Character
         [SerializeField] private InputActionAsset inputActions;
 
         private Rigidbody2D _rb;
-        private CharacterSpriteSwapper _spriteSwapper;
+        private CharacterRenderer _renderer;
         private CharacterEntity _entity;
         private Vector2 _moveInput;
         private Vector2 _lastMoveDirection = Vector2.down;
@@ -32,7 +32,9 @@ namespace Perihelion.Character
             _rb.gravityScale = 0f;
             _rb.freezeRotation = true;
 
-            _spriteSwapper = GetComponent<CharacterSpriteSwapper>();
+            _renderer = GetComponent<CharacterRenderer>();
+            if (_renderer == null) _renderer = gameObject.AddComponent<CharacterRenderer>();
+
             _entity = GetComponent<CharacterEntity>();
 
             if (inputActions != null)
@@ -41,6 +43,14 @@ namespace Perihelion.Character
                 _moveAction = _playerMap?.FindAction("Move");
                 _skill1Action = _playerMap?.FindAction("Skill1");
                 _skill2Action = _playerMap?.FindAction("Skill2");
+            }
+        }
+
+        private void Start()
+        {
+            if (_entity != null && !string.IsNullOrEmpty(_entity.defName))
+            {
+                _renderer.Initialize(_entity.defName);
             }
         }
 
@@ -80,10 +90,10 @@ namespace Perihelion.Character
                 _aimDirection = _lastMoveDirection;
             }
 
-            if (_spriteSwapper != null)
+            if (_renderer != null)
             {
                 bool isMoving = _moveInput.sqrMagnitude > 0.01f;
-                _spriteSwapper.SetDirection(_aimDirection, isMoving);
+                _renderer.SetDirection(_aimDirection, isMoving);
             }
         }
 

@@ -44,7 +44,7 @@ namespace Perihelion.Combat
             if (Def.isAttached && shooter != null)
             {
                 transform.SetParent(shooter.transform);
-                _rb.isKinematic = true;
+                _rb.bodyType = RigidbodyType2D.Kinematic;
                 _rb.linearVelocity = Vector2.zero;
             }
         }

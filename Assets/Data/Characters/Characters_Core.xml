@@ -9,10 +9,26 @@
         <movementType>Dash</movementType>
         <moveSpeed>5</moveSpeed>
         <size>1</size>
-        <portraitPath>Art/Characters/Lonabella</portraitPath>
+        <prefabPath>Prefabs/Characters/WayfarerBase</prefabPath>
+        <graphics>
+            <part name="Body" texPath="Art/Characters/Lonabella/Body" drawOrder="0"/>
+            <part name="Head" texPath="Art/Characters/Lonabella/Head" drawOrder="1"/>
+            <part name="ArmL" texPath="Art/Characters/Lonabella/ArmL" drawOrder="2" drawOrderNorth="-1"/>
+            <part name="ArmR" texPath="Art/Characters/Lonabella/ArmR" drawOrder="3" drawOrderNorth="-2"/>
+        </graphics>
+        <animations>
+            <walk cycleDuration="0.6">
+                <partAnim part="Body" offsetY="0~0.1"/>
+                <partAnim part="Head" offsetY="0~0.1"/>
+                <partAnim part="ArmL" rotationZ="-20~20"/>
+                <partAnim part="ArmR" rotationZ="20~-20"/>
+            </walk>
+            <idle cycleDuration="1.0">
+                <partAnim part="Body" offsetY="0~0.05"/>
+                <partAnim part="Head" offsetY="0~0.05"/>
+            </idle>
+        </animations>
         <maxActiveSkills>4</maxActiveSkills>
-        <defaultLoadout/>
-        <skillSlots/>
     </CharacterRef>
 
     <CharacterRef>
@@ -25,10 +41,19 @@
         <size>2</size>
         <defaultProjectileRef>TestLaser</defaultProjectileRef>
         <defaultSecondaryAttack>TestSword</defaultSecondaryAttack>
-        <portraitPath>Art/Characters/TestShooter</portraitPath>
+        <prefabPath>Prefabs/Characters/WayfarerBase</prefabPath>
+        <graphics>
+            <part name="Body" texPath="Art/Characters/TestShooter/Body" drawOrder="0"/>
+        </graphics>
+        <animations>
+            <walk cycleDuration="0.6">
+                <partAnim part="Body" offsetY="0~0.1"/>
+            </walk>
+            <idle cycleDuration="1.0">
+                <partAnim part="Body" offsetY="0~0.05"/>
+            </idle>
+        </animations>
         <maxActiveSkills>4</maxActiveSkills>
-        <defaultLoadout/>
-        <skillSlots/>
     </CharacterRef>
 
 </CharacterRefs>

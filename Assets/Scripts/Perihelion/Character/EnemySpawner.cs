@@ -43,6 +43,10 @@ namespace Perihelion.Character
                 {
                     entity.Initialize(enemyRefId);
                 }
+
+                var renderer = obj.GetComponent<CharacterRenderer>();
+                if (renderer == null) renderer = obj.AddComponent<CharacterRenderer>();
+                renderer.Initialize(enemyRefId);
             }
             else
             {
