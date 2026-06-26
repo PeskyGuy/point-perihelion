@@ -23,6 +23,18 @@ namespace Perihelion.Refs
         [XmlElement("movementType")]
         public string movementType;
 
+        [XmlElement("moveSpeed")]
+        public float moveSpeed = 5f;
+
+        [XmlElement("size")]
+        public float size = 1f;
+
+        [XmlElement("defaultProjectileRef")]
+        public string defaultProjectileRef;
+
+        [XmlElement("defaultSecondaryAttack")]
+        public string defaultSecondaryAttack;
+
         [XmlElement("portraitPath")]
         public string portraitPath;
 

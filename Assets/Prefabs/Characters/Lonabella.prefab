@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 773154755765516757}
   - component: {fileID: 7325198978266320608}
   m_Layer: 0
-  m_Name: Body
+  m_Name: LonaBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 2097406741053034404}
   - component: {fileID: 7598356950699060755}
   m_Layer: 0
-  m_Name: HandL
+  m_Name: LonaArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 8736763749500741717}
   - component: {fileID: 5176964153627682105}
   m_Layer: 0
-  m_Name: HandR
+  m_Name: LonaArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7143671440602611865}
   - component: {fileID: 486287601618795020}
   m_Layer: 0
-  m_Name: Head
+  m_Name: LonaHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,6 +373,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4088254113532962642}
+  - component: {fileID: 8114665285594684634}
+  - component: {fileID: 4445613257515169789}
   m_Layer: 0
   m_Name: Lonabella
   m_TagString: Untagged
@@ -399,3 +401,29 @@ Transform:
   - {fileID: 8736763749500741717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8114665285594684634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750329284222143475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681361ea4c99fd144abdbfa4cec543bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Perihelion.Character.CharacterEntity
+  defName: Lonabella
+--- !u!114 &4445613257515169789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750329284222143475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486d23b794c3549479c74fef6e991014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Perihelion.Character.ProceduralAnimator
+  profile: {fileID: 11400000, guid: 53cf4d5397c54c34dbf85f1316ed0ba9, type: 2}

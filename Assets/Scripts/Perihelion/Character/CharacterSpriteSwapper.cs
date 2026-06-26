@@ -18,7 +18,7 @@ namespace Perihelion.Character
         private SpriteRenderer _headRenderer;
         private SpriteRenderer _handLRenderer;
         private SpriteRenderer _handRRenderer;
-        private Animator _animator;
+        private ProceduralAnimator _proceduralAnimator;
 
         private string _currentDirection = "south";
         private bool _currentFlip;
@@ -32,7 +32,7 @@ namespace Perihelion.Character
             if (resolvers == null || resolvers.Length == 0)
                 resolvers = GetComponentsInChildren<SpriteResolver>();
 
-            _animator = GetComponent<Animator>();
+            _proceduralAnimator = GetComponent<ProceduralAnimator>();
 
             foreach (Transform child in transform)
             {
@@ -53,62 +53,58 @@ namespace Perihelion.Character
             if (_headRenderer == null) Debug.LogWarning("[Swapper] No child with 'head' in name found");
             if (_handLRenderer == null) Debug.LogWarning("[Swapper] No child with 'handl' in name found");
             if (_handRRenderer == null) Debug.LogWarning("[Swapper] No child with 'handr' in name found");
-            if (_animator == null) Debug.LogWarning("[Swapper] No Animator component found on the character");
+            if (_proceduralAnimator == null) Debug.LogWarning("[Swapper] No ProceduralAnimator component found on the character");
 #endif
         }
 
-        public void SetDirection(Vector2 movement)
+        public void SetDirection(Vector2 direction, bool isMoving = true)
         {
-            bool moving = movement.sqrMagnitude >= 0.01f;
-            
-            if (_animator != null && moving != _isMoving)
+            if (_proceduralAnimator != null && isMoving != _isMoving)
             {
-                _isMoving = moving;
-                _animator.SetBool("IsMoving", _isMoving);
+                _isMoving = isMoving;
+                _proceduralAnimator.SetMoving(_isMoving);
             }
 
-            if (!moving) return;
+            if (direction.sqrMagnitude < 0.01f) return;
 
-            float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            string direction;
+            string directionStr;
             int dirIndex;
             bool flipX;
 
             if (angle > 45f && angle <= 135f)
             {
-                direction = "north";
+                directionStr = "north";
                 dirIndex = 1;
                 flipX = false;
             }
             else if (angle > -135f && angle <= -45f)
             {
-                direction = "south";
+                directionStr = "south";
                 dirIndex = 0;
                 flipX = false;
             }
             else if (angle > -45f && angle <= 45f)
             {
-                direction = "east";
+                directionStr = "east";
                 dirIndex = 2;
                 flipX = false;
             }
             else
             {
-                direction = "east";
+                directionStr = "east";
                 dirIndex = 2;
                 flipX = true;
             }
 
-            if (direction == _currentDirection && flipX == _currentFlip) return;
-
-            _currentDirection = direction;
-            _currentFlip = flipX;
+            if (directionStr != _currentDirection || flipX != _currentFlip)
+            {
+                _currentDirection = directionStr;
+                _currentFlip = flipX;
             
-            if (_animator != null)
-                _animator.SetInteger("Direction", dirIndex);
-                
-            ApplyDirection(direction, flipX);
+                ApplyDirection(directionStr, flipX);
+            }
         }
 
         private void ApplyDirection(string direction, bool flipX)

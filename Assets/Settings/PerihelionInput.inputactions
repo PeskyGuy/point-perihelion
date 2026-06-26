@@ -139,7 +139,7 @@
                 {
                     "name": "",
                     "id": "b1000003-0000-0000-0000-000000000001",
-                    "path": "<Keyboard>/1",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -150,7 +150,7 @@
                 {
                     "name": "",
                     "id": "b1000003-0000-0000-0000-000000000002",
-                    "path": "<Keyboard>/2",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

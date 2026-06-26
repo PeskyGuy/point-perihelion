@@ -2,14 +2,15 @@
 <EnemyRefs>
 
     <EnemyRef>
-        <refName>PrimordialThrall</refName>
-        <label>primordial thrall</label>
-        <description>Mindless foot soldier of the sun-portals. Moves in packs.</description>
+        <refName>TestEnemy</refName>
+        <label>test enemy</label>
+        <description>A basic test enemy that moves towards the player.</description>
         <category>Minion</category>
         <health>30</health>
         <damage>5</damage>
         <speed>3.0</speed>
         <attackPattern>Melee_Swarm</attackPattern>
+        <prefabPath>Enemies/TestEnemy</prefabPath>
         <lootTable>
             <li>
                 <itemRef>IronShard</itemRef>

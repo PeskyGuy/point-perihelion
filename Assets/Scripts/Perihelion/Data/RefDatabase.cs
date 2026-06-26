@@ -8,7 +8,24 @@ namespace Perihelion.Data
 {
     public class RefDatabase : MonoBehaviour
     {
-        public static RefDatabase Instance { get; private set; }
+        private static RefDatabase _instance;
+        public static RefDatabase Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindFirstObjectByType<RefDatabase>();
+                    if (_instance == null)
+                    {
+                        GameObject go = new GameObject("RefDatabase");
+                        _instance = go.AddComponent<RefDatabase>();
+                        // Awake will run automatically and call LoadAll
+                    }
+                }
+                return _instance;
+            }
+        }
 
         private readonly Dictionary<string, RefDef> _allRefs = new();
         private readonly Dictionary<Type, Dictionary<string, RefDef>> _typedRefs = new();
@@ -18,12 +35,12 @@ namespace Perihelion.Data
 
         private void Awake()
         {
-            if (Instance != null && Instance != this)
+            if (_instance != null && _instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
-            Instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
             LoadAll();
         }
@@ -42,6 +59,7 @@ namespace Perihelion.Data
             Register(RefLoader.LoadAll<CharacterRef>(Path.Combine(basePath, "Characters"), "CharacterRefs"));
             Register(RefLoader.LoadAll<EnemyRef>(Path.Combine(basePath, "Enemies"), "EnemyRefs"));
             Register(RefLoader.LoadAll<BuildingRef>(Path.Combine(basePath, "Buildings"), "BuildingRefs"));
+            Register(RefLoader.LoadAll<ProjectileRef>(Path.Combine(basePath, "Projectiles"), "ProjectileRefs"));
 
             string patchDir = Path.Combine(Application.dataPath, patchPath);
             var patches = RefLoader.LoadPatches(patchDir);

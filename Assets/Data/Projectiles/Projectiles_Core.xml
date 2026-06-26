@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectileRefs>
+    <ProjectileRef>
+        <refName>TestLaser</refName>
+        <label>test laser</label>
+        <description>A simple testing projectile.</description>
+        <speed>12</speed>
+        <damage>10</damage>
+        <cooldown>0.5</cooldown>
+        <knockback>2.0</knockback>
+        <lifetime>3.0</lifetime>
+        <prefabPath>Projectiles/TestLaser</prefabPath>
+    </ProjectileRef>
+
+    <ProjectileRef>
+        <refName>TestSword</refName>
+        <label>test sword</label>
+        <description>A basic melee swing for testing.</description>
+        <speed>0</speed>
+        <damage>10</damage>
+        <cooldown>0.3</cooldown>
+        <knockback>6.0</knockback>
+        <lifetime>0.25</lifetime>
+        <range>1.5</range>
+        <isAttached>true</isAttached>
+        <prefabPath>Projectiles/TestSword</prefabPath>
+    </ProjectileRef>
+</ProjectileRefs>

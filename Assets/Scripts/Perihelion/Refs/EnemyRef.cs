@@ -41,5 +41,8 @@ namespace Perihelion.Refs
         [XmlArray("lootTable")]
         [XmlArrayItem("li")]
         public LootEntry[] lootTable;
+
+        [XmlElement("prefabPath")]
+        public string prefabPath;
     }
 }

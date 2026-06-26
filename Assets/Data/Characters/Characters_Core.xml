@@ -7,7 +7,25 @@
         <description>Dwarven brawler from an ice-locked mining world. Settles every argument with her fists.</description>
         <archetypeRef>Bruiser</archetypeRef>
         <movementType>Dash</movementType>
+        <moveSpeed>5</moveSpeed>
+        <size>1</size>
         <portraitPath>Art/Characters/Lonabella</portraitPath>
+        <maxActiveSkills>4</maxActiveSkills>
+        <defaultLoadout/>
+        <skillSlots/>
+    </CharacterRef>
+
+    <CharacterRef>
+        <refName>TestShooter</refName>
+        <label>test shooter</label>
+        <description>A test character for verifying the projectile systems.</description>
+        <archetypeRef>Striker</archetypeRef>
+        <movementType>Walk</movementType>
+        <moveSpeed>8</moveSpeed>
+        <size>2</size>
+        <defaultProjectileRef>TestLaser</defaultProjectileRef>
+        <defaultSecondaryAttack>TestSword</defaultSecondaryAttack>
+        <portraitPath>Art/Characters/TestShooter</portraitPath>
         <maxActiveSkills>4</maxActiveSkills>
         <defaultLoadout/>
         <skillSlots/>
